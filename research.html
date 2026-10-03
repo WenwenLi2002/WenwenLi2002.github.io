@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Research · Wenwen Li</title>
+  <meta name="description" content="Publications and preprints by Wenwen Li: Bayesian optimization on networks, elliptic Bayesian inverse problems, and continuous data assimilation with learned surrogate dynamics.">
+  <link rel="canonical" href="https://wenwenli2002.github.io/research.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Research · Wenwen Li">
+  <meta property="og:description" content="Publications and preprints by Wenwen Li: Bayesian optimization on networks, elliptic Bayesian inverse problems, and continuous data assimilation with learned surrogate dynamics.">
+  <meta property="og:url" content="https://wenwenli2002.github.io/research.html">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%237b2038'/%3E%3Ctext x='32' y='43' text-anchor='middle' fill='white' font-family='Georgia,serif' font-size='32'%3EWL%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Research \u00b7 Wenwen Li", "url": "https://wenwenli2002.github.io/research.html", "mainEntity": {"@type": "Person", "name": "Wenwen Li", "url": "https://wenwenli2002.github.io/", "email": "mailto:wenwenli@uchicago.edu", "jobTitle": "PhD student", "affiliation": {"@type": "CollegeOrUniversity", "name": "University of Chicago"}, "sameAs": ["https://github.com/WenwenLi2002"]}}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="signature" href="index.html" aria-label="Wenwen Li, home">Wenwen Li<span class="signature-mark" aria-hidden="true">.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="research.html" aria-current="page">Research</a>
+      <a href="talks.html">Talks</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="cv.html">CV</a>
+    </nav>
+  </header>
+  <main id="main" class="wrap page-section">
+    <section id="research" class="research" aria-labelledby="research-heading">
+      <div class="section-heading">
+        <h1 id="research-heading">Research</h1>
+        <p>Publications &amp; preprints</p>
+      </div>
+
+      <article class="publication" aria-labelledby="bo-title">
+        <div class="article-index" aria-hidden="true">01</div>
+        <div class="article-main">
+          <div class="research-grid">
+            <div class="research-copy">
+              <p class="venue"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0021999126001695" target="_blank" rel="noopener">Journal of Computational Physics</a><span>558, 114819 · 2026</span></p>
+              <h2 id="bo-title">Bayesian Optimization on Networks</h2>
+              <p class="authors"><strong>Wenwen Li</strong>, <a href="https://sites.google.com/a/uchicago.edu/sanz-alonso/" target="_blank" rel="noopener">Daniel Sanz-Alonso</a>, <a href="https://ruiyiyang.github.io/" target="_blank" rel="noopener">Ruiyi Yang</a></p>
+              <p class="takeaway">Choosing informative evaluations with Gaussian processes adapted to network geometry.</p>
+              <p class="description">We develop Bayesian optimization on metric graphs using Whittle–Matérn Gaussian processes. Our analysis treats unknown objective smoothness and finite element approximations of the prior, with experiments on benchmark functions and source-location inference.</p>
+              <p class="topics">Gaussian processes · Bayesian optimization · Metric graphs</p>
+              <div class="paper-links">
+                <a href="https://www.sciencedirect.com/science/article/abs/pii/S0021999126001695" target="_blank" rel="noopener">Paper</a>
+                <a href="https://arxiv.org/abs/2510.27643" target="_blank" rel="noopener">arXiv:2510.27643</a>
+                <a href="assets/Bayesian-Optimization-on-Networks-SIAM-AN26.pdf" target="_blank" rel="noopener">Slides</a>
+              </div>
+            </div>
+            <figure class="research-figure network-figure">
+              <button class="figure-button" data-figure="assets/bo-network.png" data-caption="Log-posterior for source-location inference on a telecommunication network. The unknown location varies continuously along the network’s edges." aria-label="Enlarge the network log-posterior figure">
+                <img src="assets/bo-network.png" alt="Telecommunication metric graph colored by the source-location log-posterior, with colorbar from minus 50 to zero" width="455" height="357" loading="lazy">
+              </button>
+              <figcaption>Source-location log-posterior on a telecommunication network. The unknown location varies along its edges.</figcaption>
+            </figure>
+          </div>
+          <details class="experiment-detail">
+            <summary>A closer look at the experiment</summary>
+            <div class="experiment-content">
+              <button class="figure-button small-result" data-figure="assets/bo-reach-rate.png" data-caption="GP–TS reach rates in the network source-location experiment: 96% for the graph-based SPDE prior and 14% for the Euclidean prior." aria-label="Enlarge the GP–TS reach-rate comparison">
+                <img src="assets/bo-reach-rate.png" alt="GP–TS reach-rate comparison: Euclidean prior 14 percent, graph-based SPDE prior 96 percent" width="305" height="294" loading="lazy">
+              </button>
+              <p>In this source-location experiment, Gaussian process Thompson sampling with the graph-based prior reaches the prescribed regret tolerance in <strong>96% of trials</strong>, compared with <strong>14%</strong> for the Euclidean prior. This comparison illustrates the value of respecting the domain’s geometry in this setting.</p>
+            </div>
+          </details>
+        </div>
+      </article>
+
+      <article class="publication" aria-labelledby="elliptic-title">
+        <div class="article-index" aria-hidden="true">02</div>
+        <div class="article-main">
+          <div class="article-heading">
+            <p class="venue"><a href="https://doi.org/10.1088/1361-6420/ae544e" target="_blank" rel="noopener">Inverse Problems</a><span>2026</span></p>
+            <h2 id="elliptic-title">Elliptic Bayesian Inverse Problems on Metric Graphs</h2>
+            <p class="authors"><a href="https://www.kaust.edu.sa/en/study/faculty/david-bolin" target="_blank" rel="noopener">David Bolin</a>, <strong>Wenwen Li</strong>, <a href="https://sites.google.com/a/uchicago.edu/sanz-alonso/" target="_blank" rel="noopener">Daniel Sanz-Alonso</a></p>
+          </div>
+          <p class="takeaway">Recovering diffusion coefficients from noisy observations on networks, with posterior uncertainty.</p>
+          <p class="description wide-copy">We formulate Bayesian inverse problems for elliptic and fractional elliptic equations on metric graphs. Forward-model stability and Whittle–Matérn priors yield Bayesian well-posedness; finite element solvers and pCN MCMC support numerical reconstruction and uncertainty quantification.</p>
+          <div class="paired-figures">
+            <figure class="research-figure">
+              <p class="figure-label">Ground truth</p>
+              <button class="figure-button" data-figure="assets/elliptic-truth.png" data-caption="Ground-truth log-conductivity u on the letter-shaped metric graph." aria-label="Enlarge the ground-truth log-conductivity figure">
+                <img src="assets/elliptic-truth.png" alt="Ground-truth log-conductivity shown by color along the edges of a graph spelling METRIC GRAPH" width="1150" height="722" loading="lazy">
+              </button>
+            </figure>
+            <figure class="research-figure">
+              <p class="figure-label">Posterior mean</p>
+              <button class="figure-button" data-figure="assets/elliptic-posterior.png" data-caption="Posterior mean of the log-conductivity u, inferred from noisy solution observations." aria-label="Enlarge the posterior mean reconstruction">
+                <img src="assets/elliptic-posterior.png" alt="Posterior mean log-conductivity reconstructed on the same letter-shaped graph, with the original colorbar and axes" width="1150" height="722" loading="lazy">
+              </button>
+            </figure>
+          </div>
+          <p class="shared-caption">Log-conductivity on a letter-shaped metric graph: the true field and its posterior mean inferred from noisy solution observations.</p>
+          <p class="topics">Bayesian inverse problems · Uncertainty quantification · PDEs on networks</p>
+          <div class="paper-links">
+            <a href="https://doi.org/10.1088/1361-6420/ae544e" target="_blank" rel="noopener">Paper</a>
+            <a href="https://arxiv.org/abs/2507.18951" target="_blank" rel="noopener">arXiv:2507.18951</a>
+            <a href="https://github.com/WenwenLi2002/Bayesian-Inverse-Problems-on-Metric-Graphs" target="_blank" rel="noopener" aria-label="R reference code for elliptic Bayesian inverse problems">Code · R</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="publication" aria-labelledby="cda-title">
+        <div class="article-index" aria-hidden="true">03</div>
+        <div class="article-main">
+          <div class="research-grid">
+            <div class="research-copy">
+              <p class="venue">Preprint<span>2026</span></p>
+              <h2 id="cda-title">Continuous Data Assimilation with Learned Surrogate Dynamics</h2>
+              <p class="authors"><strong>Wenwen Li</strong>, <a href="https://sites.google.com/a/uchicago.edu/sanz-alonso/" target="_blank" rel="noopener">Daniel Sanz-Alonso</a></p>
+              <p class="takeaway">Understanding state tracking with learned dynamics and partial observations.</p>
+              <p class="description">We analyze continuous data assimilation with learned surrogate dynamics in a finite-dimensional setting. Tracking bounds separate surrogate approximation error from observation noise. We study learned vector fields and short-time solution maps, connecting training-data requirements with tracking guarantees.</p>
+              <p class="topics">Data assimilation · Surrogate learning · Error analysis</p>
+              <div class="paper-links">
+                <a href="https://arxiv.org/abs/2606.00480" target="_blank" rel="noopener">arXiv:2606.00480</a>
+                <a href="https://github.com/WenwenLi2002/continuous-data-assimilation-with-surrogate-dynamics" target="_blank" rel="noopener" aria-label="Python reference code for continuous data assimilation">Code · Python</a>
+              </div>
+            </div>
+            <figure class="research-figure tracking-figure">
+              <button class="figure-button" data-figure="assets/cda-tracking-error.png" data-caption="State tracking error in a noiseless-observation solution-map experiment. Blue: exact-model AOT. Orange: learned-surrogate AOT. Green: surrogate free run. Curves are medians; shaded bands show the interquartile range." aria-label="Enlarge the state tracking error comparison">
+                <img src="assets/cda-tracking-error.png" alt="Log-scale state tracking error versus time, comparing exact-model AOT, surrogate AOT, and a surrogate free run" width="808" height="508" loading="lazy">
+              </button>
+              <figcaption>Observation feedback reduces state tracking error relative to a free surrogate run. The experiment uses noiseless observations.</figcaption>
+            </figure>
+          </div>
+          <details class="experiment-detail">
+            <summary>View coordinate tracking</summary>
+            <figure class="coordinate-result">
+              <button class="figure-button" data-figure="assets/cda-coordinate-tracking.png" data-caption="Coordinates x₁, x₂, and x₃ with exact-model AOT, learned-surrogate AOT, and a surrogate free run. Black is the reference trajectory; colored curves correspond to different initializations. Noiseless-observation solution-map experiment." aria-label="Enlarge the coordinate tracking comparison">
+                <img src="assets/cda-coordinate-tracking.png" alt="Nine-panel comparison of three state coordinates: exact-model AOT, surrogate AOT, and free surrogate trajectories" width="1571" height="749" loading="lazy">
+              </button>
+              <figcaption>State coordinates across different initializations. Black denotes the reference trajectory; observation feedback keeps the estimated trajectories close to it in this experiment.</figcaption>
+            </figure>
+          </details>
+        </div>
+      </article>
+
+      <div class="ongoing-work">
+        <p class="eyebrow">Ongoing work</p>
+        <h2>Adaptive Bayesian Multiscale Learning of Linear Operators</h2>
+        <p class="muted">Manuscript in preparation.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap site-footer">
+    <div><span class="footer-name">Wenwen Li</span><p>University of Chicago</p></div>
+    <div class="footer-links"><a href="mailto:wenwenli@uchicago.edu">wenwenli@uchicago.edu</a><a href="https://github.com/WenwenLi2002" target="_blank" rel="noopener">WenwenLi2002</a><a href="assets/Wenwen-Li-CV.pdf" target="_blank" rel="noopener">CV</a></div>
+  </footer>
+  <dialog id="figure-dialog" aria-labelledby="figure-dialog-title">
+    <div class="dialog-header"><h2 id="figure-dialog-title">Research figure</h2><button type="button" id="close-figure">Close</button></div>
+    <img id="enlarged-figure" alt="">
+    <p id="figure-caption"></p>
+  </dialog>
+</body>
+</html>

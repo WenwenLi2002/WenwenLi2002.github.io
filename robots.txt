@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://wenwenli2002.github.io/sitemap.xml
