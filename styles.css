@@ -69,11 +69,7 @@ summary::marker{font-size:11.2px;color:var(--accent)}
 .paired-figures{display:grid;grid-template-columns:1fr 1fr;gap:28.8px;margin-top:24px}
 .figure-label{font-size:13px;font-weight:600;color:var(--muted);margin-bottom:5.6px;text-align:center}
 .shared-caption{max-width:860px;margin-top:11.2px}
-.ongoing-work{margin-left:calc(40px + 28px);padding-bottom:44.8px}
-.ongoing-work h2{font-size:22.4px;margin-bottom:10.4px}
-.ongoing-work .eyebrow{margin-bottom:9.6px}
 .muted{color:var(--muted)}
-.ongoing-work .muted{font-size:14px;margin:0}
 .lower-section{margin-top:38.4px}
 .lower-section .section-heading{border-top:1px solid var(--line);margin-bottom:14.4px;padding-top:22.4px}
 .talk-list,.teaching-list{list-style:none;margin:0;padding:0}
@@ -108,7 +104,6 @@ dialog::backdrop{background:rgba(27,24,30,.65)}
 .research-grid{gap:28.8px;grid-template-columns:1.05fr 1fr}
 .publication{gap:17.6px;grid-template-columns:28px minmax(0,1fr)}
 .publication h2{font-size:26.4px}
-.ongoing-work{margin-left:calc(28px + 17.6px)}
 .section-heading{flex-wrap:wrap}
 .section-heading>p{font-size:13px}
 .background-grid{gap:32px}}
@@ -138,8 +133,6 @@ h1{font-size:50.4px}
 .paired-figures img{width:100%}
 .experiment-content{grid-template-columns:1fr;gap:16px}
 .small-result{max-width:270px;margin-inline:auto}
-.ongoing-work{margin-left:0;padding-bottom:19.2px}
-.ongoing-work h2{font-size:20.8px}
 .talk-list li{gap:16px}
 .talk-list time{font-size:12px}
 .teaching-list li{grid-template-columns:78px minmax(0,1fr);gap:12.8px}
