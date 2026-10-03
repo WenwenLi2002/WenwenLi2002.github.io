@@ -43,8 +43,8 @@
               <p class="venue"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0021999126001695" target="_blank" rel="noopener">Journal of Computational Physics</a><span>558, 114819 · 2026</span></p>
               <h2 id="bo-title">Bayesian Optimization on Networks</h2>
               <p class="authors"><strong>Wenwen Li</strong>, <a href="https://sites.google.com/a/uchicago.edu/sanz-alonso/" target="_blank" rel="noopener">Daniel Sanz-Alonso</a>, <a href="https://ruiyiyang.github.io/" target="_blank" rel="noopener">Ruiyi Yang</a></p>
-              <p class="takeaway">Bayesian optimization for functions defined on metric graphs.</p>
-              <p class="description">We construct Bayesian optimization algorithms using Whittle–Matérn Gaussian process priors on metric graphs. We establish regret bounds and analyze unknown objective smoothness and finite element approximations of the prior. Numerical examples include benchmark functions and source-location inference on a telecommunication network.</p>
+              <p class="takeaway">Optimizing expensive black-box functions on networks modeled as metric graphs.</p>
+              <p class="description">We develop Bayesian optimization on metric graphs, where query locations can lie along the edges as well as at the vertices. Whittle–Matérn Gaussian process surrogates, defined through stochastic PDEs on the graph, guide sequential evaluations of the objective while respecting the network geometry.</p><p class="description">We establish regret bounds under regularity assumptions and analyze the effects of unknown objective smoothness and finite element approximation of the prior. Experiments cover benchmark functions on a synthetic graph and maximum a posteriori estimation for a source-identification inverse problem on a telecommunication network.</p>
               <p class="topics">Gaussian processes · Bayesian optimization · Metric graphs</p>
               <div class="paper-links">
                 <a href="https://www.sciencedirect.com/science/article/abs/pii/S0021999126001695" target="_blank" rel="noopener">Paper</a>
@@ -53,10 +53,10 @@
               </div>
             </div>
             <figure class="research-figure network-figure">
-              <button class="figure-button" data-figure="assets/bo-network.png" data-caption="Log-posterior for source-location inference on a telecommunication network. The unknown location varies continuously along the network’s edges." aria-label="Enlarge the network log-posterior figure">
+              <button class="figure-button" data-figure="assets/bo-network.png" data-caption="Log-posterior for the source-identification experiment on a telecommunication network. Bayesian optimization seeks its maximizer to compute a maximum a posteriori estimate from partial, noisy observations of an elliptic PDE solution." aria-label="Enlarge the network log-posterior figure">
                 <img src="assets/bo-network.png" alt="Telecommunication metric graph colored by the source-location log-posterior, with colorbar from minus 50 to zero" width="455" height="357" loading="lazy">
               </button>
-              <figcaption>Source-location log-posterior on a telecommunication network. The unknown location varies along its edges.</figcaption>
+              <figcaption>An inverse-problem example: the log-posterior for a source location inferred from partial, noisy observations of an elliptic PDE solution on a telecommunication network.</figcaption>
             </figure>
           </div>
         </div>
@@ -70,8 +70,8 @@
             <h2 id="elliptic-title">Elliptic Bayesian Inverse Problems on Metric Graphs</h2>
             <p class="authors"><a href="https://www.kaust.edu.sa/en/study/faculty/david-bolin" target="_blank" rel="noopener">David Bolin</a>, <strong>Wenwen Li</strong>, <a href="https://sites.google.com/a/uchicago.edu/sanz-alonso/" target="_blank" rel="noopener">Daniel Sanz-Alonso</a></p>
           </div>
-          <p class="takeaway">Bayesian inference for diffusion coefficients in elliptic equations on metric graphs.</p>
-          <p class="description wide-copy">We study the recovery of diffusion coefficients from noisy observations of solutions to elliptic and fractional elliptic equations on metric graphs. We establish well-posedness using forward-model stability and Whittle–Matérn priors, and compute posterior reconstructions with finite element methods and MCMC.</p>
+          <p class="takeaway">Recovering spatially varying coefficients on networks, with quantified uncertainty.</p>
+          <p class="description wide-copy">We formulate Bayesian inverse problems for recovering diffusion coefficients in elliptic and fractional elliptic equations from noisy solution measurements. The unknown coefficient is a function along the edges of a metric graph, so inference must account for both the edge geometry and the coupling at vertices.</p><p class="description wide-copy">We establish stability of the forward models and use Whittle–Matérn priors with suitable regularity to prove that the posterior depends continuously on the observed data. Numerical experiments demonstrate coefficient reconstruction and uncertainty quantification for both elliptic and fractional elliptic problems.</p>
           <div class="paired-figures">
             <figure class="research-figure">
               <p class="figure-label">Ground truth</p>
@@ -104,8 +104,8 @@
               <p class="venue">Preprint<span>2026</span></p>
               <h2 id="cda-title">Continuous Data Assimilation with Learned Surrogate Dynamics</h2>
               <p class="authors"><strong>Wenwen Li</strong>, <a href="https://sites.google.com/a/uchicago.edu/sanz-alonso/" target="_blank" rel="noopener">Daniel Sanz-Alonso</a></p>
-              <p class="takeaway">Error analysis for data assimilation with learned dynamical models.</p>
-              <p class="description">We study nudging algorithms that use learned vector fields or short-time solution maps in place of the true dynamics. In a finite-dimensional setting, we derive tracking error bounds that account for surrogate approximation error and observation noise. We also quantify training-data requirements for accurate tracking with noiseless observations.</p>
+              <p class="takeaway">Tracking dynamical systems from partial observations using learned models.</p>
+              <p class="description">When dynamics are unknown or expensive to simulate, learned models offer an alternative for data assimilation. We develop a unified finite-dimensional analysis of nudging, which combines a dynamical model with feedback from partial observations to estimate the evolving state.</p><p class="description">We establish conditions for accurate tracking with the true dynamics, then show how learned surrogates retain exponential convergence up to an error floor determined by model error and observation noise. For surrogates learned as vector fields or short-time solution maps, we bound the training data needed for accurate tracking with noiseless observations. Numerical experiments support the analysis.</p>
               <p class="topics">Data assimilation · Surrogate learning · Error analysis</p>
               <div class="paper-links">
                 <a href="https://arxiv.org/abs/2606.00480" target="_blank" rel="noopener">arXiv:2606.00480</a>
