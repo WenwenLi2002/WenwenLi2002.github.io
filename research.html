@@ -43,8 +43,8 @@
               <p class="venue"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0021999126001695" target="_blank" rel="noopener">Journal of Computational Physics</a><span>558, 114819 · 2026</span></p>
               <h2 id="bo-title">Bayesian Optimization on Networks</h2>
               <p class="authors"><strong>Wenwen Li</strong>, <a href="https://sites.google.com/a/uchicago.edu/sanz-alonso/" target="_blank" rel="noopener">Daniel Sanz-Alonso</a>, <a href="https://ruiyiyang.github.io/" target="_blank" rel="noopener">Ruiyi Yang</a></p>
-              <p class="takeaway">Choosing informative evaluations with Gaussian processes adapted to network geometry.</p>
-              <p class="description">We develop Bayesian optimization on metric graphs using Whittle–Matérn Gaussian processes. Our analysis treats unknown objective smoothness and finite element approximations of the prior, with experiments on benchmark functions and source-location inference.</p>
+              <p class="takeaway">Bayesian optimization for functions defined on metric graphs.</p>
+              <p class="description">We construct Bayesian optimization algorithms using Whittle–Matérn Gaussian process priors on metric graphs. We establish regret bounds and analyze unknown objective smoothness and finite element approximations of the prior. Numerical examples include benchmark functions and source-location inference on a telecommunication network.</p>
               <p class="topics">Gaussian processes · Bayesian optimization · Metric graphs</p>
               <div class="paper-links">
                 <a href="https://www.sciencedirect.com/science/article/abs/pii/S0021999126001695" target="_blank" rel="noopener">Paper</a>
@@ -70,8 +70,8 @@
             <h2 id="elliptic-title">Elliptic Bayesian Inverse Problems on Metric Graphs</h2>
             <p class="authors"><a href="https://www.kaust.edu.sa/en/study/faculty/david-bolin" target="_blank" rel="noopener">David Bolin</a>, <strong>Wenwen Li</strong>, <a href="https://sites.google.com/a/uchicago.edu/sanz-alonso/" target="_blank" rel="noopener">Daniel Sanz-Alonso</a></p>
           </div>
-          <p class="takeaway">Recovering diffusion coefficients from noisy observations on networks, with posterior uncertainty.</p>
-          <p class="description wide-copy">We formulate Bayesian inverse problems for elliptic and fractional elliptic equations on metric graphs. Forward-model stability and Whittle–Matérn priors yield Bayesian well-posedness; finite element solvers and pCN MCMC support numerical reconstruction and uncertainty quantification.</p>
+          <p class="takeaway">Bayesian inference for diffusion coefficients in elliptic equations on metric graphs.</p>
+          <p class="description wide-copy">We study the recovery of diffusion coefficients from noisy observations of solutions to elliptic and fractional elliptic equations on metric graphs. We establish well-posedness using forward-model stability and Whittle–Matérn priors, and compute posterior reconstructions with finite element methods and MCMC.</p>
           <div class="paired-figures">
             <figure class="research-figure">
               <p class="figure-label">Ground truth</p>
@@ -104,8 +104,8 @@
               <p class="venue">Preprint<span>2026</span></p>
               <h2 id="cda-title">Continuous Data Assimilation with Learned Surrogate Dynamics</h2>
               <p class="authors"><strong>Wenwen Li</strong>, <a href="https://sites.google.com/a/uchicago.edu/sanz-alonso/" target="_blank" rel="noopener">Daniel Sanz-Alonso</a></p>
-              <p class="takeaway">Understanding state tracking with learned dynamics and partial observations.</p>
-              <p class="description">We analyze continuous data assimilation with learned surrogate dynamics in a finite-dimensional setting. Tracking bounds separate surrogate approximation error from observation noise. We study learned vector fields and short-time solution maps, connecting training-data requirements with tracking guarantees.</p>
+              <p class="takeaway">Error analysis for data assimilation with learned dynamical models.</p>
+              <p class="description">We study nudging algorithms that use learned vector fields or short-time solution maps in place of the true dynamics. In a finite-dimensional setting, we derive tracking error bounds that account for surrogate approximation error and observation noise. We also quantify training-data requirements for accurate tracking with noiseless observations.</p>
               <p class="topics">Data assimilation · Surrogate learning · Error analysis</p>
               <div class="paper-links">
                 <a href="https://arxiv.org/abs/2606.00480" target="_blank" rel="noopener">arXiv:2606.00480</a>
@@ -116,7 +116,7 @@
               <button class="figure-button" data-figure="assets/cda-tracking-error.png" data-caption="State tracking error in a noiseless-observation solution-map experiment. Blue: exact-model AOT. Orange: learned-surrogate AOT. Green: surrogate free run. Curves are medians; shaded bands show the interquartile range." aria-label="Enlarge the state tracking error comparison">
                 <img src="assets/cda-tracking-error.png" alt="Log-scale state tracking error versus time, comparing exact-model AOT, surrogate AOT, and a surrogate free run" width="808" height="508" loading="lazy">
               </button>
-              <figcaption>Observation feedback reduces state tracking error relative to a free surrogate run. The experiment uses noiseless observations.</figcaption>
+              <figcaption>State tracking error for exact-model nudging, surrogate nudging, and a surrogate free run, with noiseless observations.</figcaption>
             </figure>
           </div>
           <details class="experiment-detail">
@@ -125,7 +125,7 @@
               <button class="figure-button" data-figure="assets/cda-coordinate-tracking.png" data-caption="Coordinates x₁, x₂, and x₃ with exact-model AOT, learned-surrogate AOT, and a surrogate free run. Black is the reference trajectory; colored curves correspond to different initializations. Noiseless-observation solution-map experiment." aria-label="Enlarge the coordinate tracking comparison">
                 <img src="assets/cda-coordinate-tracking.png" alt="Nine-panel comparison of three state coordinates: exact-model AOT, surrogate AOT, and free surrogate trajectories" width="1571" height="749" loading="lazy">
               </button>
-              <figcaption>State coordinates across different initializations. Black denotes the reference trajectory; observation feedback keeps the estimated trajectories close to it in this experiment.</figcaption>
+              <figcaption>State trajectories from different initial conditions, compared with the reference trajectory in black. Observations are noiseless.</figcaption>
             </figure>
           </details>
         </div>
